@@ -53,7 +53,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ComponentName cn = new ComponentName(MainActivity.this,RetrofitActivity.class) ;
+                Intent intent = new Intent() ;
+                intent.setComponent(cn) ;
+                startActivity(intent) ;
             }
         });
 
